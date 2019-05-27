@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun May 19 16:52:20 2019
+| Host         : DESKTOP-SUPQG7H running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_env_control_sets_placed.rpt
+| Design       : test_env
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      4 |            1 |
+|     10 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             183 |           60 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               5 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+---------------+------------------+------------------+----------------+
+|           Clock Signal           | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------------------------+---------------+------------------+------------------+----------------+
+|  btn_IBUF_BUFG[1]                |               | sig_final_epoch  |                1 |              1 |
+|  sig_final_epoch_reg_i_2_n_0     |               |                  |                1 |              1 |
+|  clk_IBUF_BUFG                   |               | btn_IBUF[0]      |                1 |              4 |
+|  number_of_epochs_reg[9]_i_2_n_0 |               |                  |                3 |             10 |
+|  clk_IBUF_BUFG                   |               |                  |                4 |             16 |
+|  predictor/E[0]                  |               |                  |                7 |             18 |
+|  enable_dataset_BUFG             |               |                  |               14 |             39 |
+|  enable_predictor_BUFG           |               |                  |               15 |             49 |
+|  enable_classifier_BUFG          |               |                  |               16 |             50 |
++----------------------------------+---------------+------------------+------------------+----------------+
+
+
